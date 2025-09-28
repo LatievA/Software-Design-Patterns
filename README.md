@@ -15,3 +15,8 @@ Implementation of the **Builder Design Pattern**, demonstrating how to construct
 Implementation of the **Abstract Factory and Factory Patterns**, demonstrate how to create different User and Course implementation using different Factories.
 
 📂 [Source Code](src/assignment_2)  
+
+## Assignment 3: Adapter Pattern
+Implementation of the Adapter pattern using both Class adapter and Object adapter.
+
+📂 [Source Code](src/assignment_3)  
