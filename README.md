@@ -20,3 +20,8 @@ Implementation of the **Abstract Factory and Factory Patterns**, demonstrate how
 Implementation of the Adapter pattern using both Class adapter and Object adapter.
 
 📂 [Source Code](src/assignment_3)  
+
+## Assignment 4: Bridge Pattern
+Implementation of Bridge Pattern
+
+📂 [Source Code](src/assignment_4)
