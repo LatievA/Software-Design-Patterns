@@ -25,3 +25,8 @@ Implementation of the Adapter pattern using both Class adapter and Object adapte
 Implementation of Bridge Pattern
 
 📂 [Source Code](src/assignment_4)
+
+## Assignment 5: Decorator and Facade Patterns
+Implementation of Decorator and Facade patterns
+
+📂 [Source Code](src/assignment_5)
