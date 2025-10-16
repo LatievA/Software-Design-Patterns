@@ -7,10 +7,10 @@ public class VehicleRentalFacade {
     private final BookingSystem bookingSystem = new BookingSystem();
     private final PaymentSystem paymentSystem = new PaymentSystem();
 
-    public void rentVehicle(String customer, String type, int days, boolean insurance, boolean childSeat) {
+    public String rentVehicle(String customer, String type, int days, boolean insurance, boolean childSeat) {
         if (!inventorySystem.isAvailable(type)) {
             System.out.println("Vehicle not available for rent.");
-            return;
+            return null;
         }
 
         double dailyRate = inventorySystem.getDailyRate(type);
@@ -27,6 +27,7 @@ public class VehicleRentalFacade {
 
         System.out.printf("Rental Summary: %s%nTotal cost: $%.2f%n", description, total);
         System.out.printf("Enjoy your %s!%n%n", type);
+        return  bookingId;
     }
 
     public void returnVehicle(String bookingId) {
