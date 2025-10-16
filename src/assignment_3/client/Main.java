@@ -7,7 +7,7 @@ import assignment_3.payment.PaymentService;
 import assignment_3.payment.BankPaymentGateway;
 import assignment_3.payment.BankPaymentAdapter;
 
-public class Main {
+class Main {
     static void main() {
         LibraryService libraryService = new LibrarySystemAdapter();
         libraryService.borrowBook("STUDENT123", "ISBN-456");
