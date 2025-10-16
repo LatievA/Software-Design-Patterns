@@ -1,6 +1,6 @@
 package assignment_5.decorator;
 
-public class BaseDecorator implements RentalCost {
+public abstract class BaseDecorator implements RentalCost {
     protected final RentalCost rentalCost;
 
     public BaseDecorator(RentalCost rentalCost) {
