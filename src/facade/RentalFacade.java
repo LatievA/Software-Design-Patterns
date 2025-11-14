@@ -21,6 +21,7 @@ public class RentalFacade {
         Vehicle vehicle = VehicleFactory.createVehicle(VehicleType.CAR);
         vehicle = new GPSDecorator(vehicle);
         vehicle = new InsuranceDecorator(vehicle);
+        vehicle = new ChildSeatDecorator(vehicle);
 
         RentalAgreement agreement = new RentalAgreementBuilder()
                 .withVehicle(vehicle)
