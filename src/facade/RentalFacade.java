@@ -17,6 +17,10 @@ public class RentalFacade {
         notifier.attach(o);
     }
 
+    public void unregisterObserver(Observer o) {
+        notifier.detach(o);
+    }
+
     public void rentVehicle() {
         Vehicle vehicle = VehicleFactory.createVehicle(VehicleType.CAR);
         vehicle = new GPSDecorator(vehicle);
@@ -25,7 +29,7 @@ public class RentalFacade {
 
         RentalAgreement agreement = new RentalAgreementBuilder()
                 .withVehicle(vehicle)
-                .forCustomer("John Doe")
+                .forCustomer(Customer.name)
                 .forDuration(5)
                 .withPricing(new DailyPricing())
                 .build();
