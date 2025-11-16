@@ -7,6 +7,7 @@ import builder.*;
 import strategy.*;
 import decorator.*;
 import adapter.*;
+import adapter.interfaces.PaymentProcessor;
 import observer.*;
 
 public class RentalFacade {
@@ -26,7 +27,7 @@ public class RentalFacade {
         vehicle = new GPSDecorator(vehicle);
         vehicle = new InsuranceDecorator(vehicle);
         vehicle = new ChildSeatDecorator(vehicle);
-        PricingContext pricingContext = new PricingContext(vehicle,30,true);
+        PricingContext pricingContext = new PricingContext(vehicle, 30, true);
 
         RentalAgreement agreementWithLoyalCustomer = new RentalAgreementBuilder()
                 .withPricingContext(pricingContext)
