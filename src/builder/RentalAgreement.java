@@ -1,28 +1,28 @@
 package builder;
 
+import strategy.PricingContext;
 import vehicle.Vehicle;
 import strategy.PricingStrategy;
 
 public class RentalAgreement {
-    private final Vehicle vehicle;
     private final String customerName;
-    private final int duration;
     private final PricingStrategy pricingStrategy;
+    private final PricingContext pricingContext;
 
-    public RentalAgreement(Vehicle vehicle, String customerName, int duration, PricingStrategy strategy) {
-        this.vehicle = vehicle;
+    public RentalAgreement(PricingContext pricingContext, String customerName, PricingStrategy strategy) {
         this.customerName = customerName;
-        this.duration = duration;
         this.pricingStrategy = strategy;
+        this.pricingContext =  pricingContext;
     }
 
+
     public float calculatePrice() {
-        return pricingStrategy.calculatePrice(duration);
+        return pricingStrategy.calculatePrice(pricingContext);
     }
 
     @Override
     public String toString() {
-        return customerName + " rented " + vehicle.getDescription() +
-                " for " + duration + " units. Total: $" + calculatePrice();
+        return customerName + " rented " + pricingContext.getVehicle().getDescription() +
+                " for " + pricingContext.getDuration() + " units. Total: $" + calculatePrice();
     }
 }

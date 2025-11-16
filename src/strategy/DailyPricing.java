@@ -1,5 +1,7 @@
 package strategy;
 
 public class DailyPricing implements PricingStrategy {
-    public float calculatePrice(int duration) { return duration * 60; }
+    public float calculatePrice(PricingContext ctx) {
+        return ctx.getDuration() * 60;
+    }
 }

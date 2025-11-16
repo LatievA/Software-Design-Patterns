@@ -1,5 +1,5 @@
 package strategy;
 
 public interface PricingStrategy {
-    float calculatePrice(int duration);
+    float calculatePrice(PricingContext context);
 }

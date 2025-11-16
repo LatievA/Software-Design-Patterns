@@ -26,16 +26,16 @@ public class RentalFacade {
         vehicle = new GPSDecorator(vehicle);
         vehicle = new InsuranceDecorator(vehicle);
         vehicle = new ChildSeatDecorator(vehicle);
+        PricingContext pricingContext = new PricingContext(vehicle,30,true);
 
-        RentalAgreement agreement = new RentalAgreementBuilder()
-                .withVehicle(vehicle)
+        RentalAgreement agreementWithLoyalCustomer = new RentalAgreementBuilder()
+                .withPricingContext(pricingContext)
                 .forCustomer(Customer.name)
-                .forDuration(5)
                 .withPricing(new DailyPricing())
                 .build();
 
-        System.out.println(agreement);
-        paymentProcessor.pay(agreement.calculatePrice());
+        System.out.println(agreementWithLoyalCustomer);
+        paymentProcessor.pay(agreementWithLoyalCustomer.calculatePrice());
         notifier.notifyObservers("Vehicle rented: " + vehicle.getDescription());
     }
 }
