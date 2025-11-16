@@ -1,5 +1,7 @@
 package strategy;
 
+import strategy.interfaces.PricingStrategy;
+
 public class LoyaltyDiscount implements PricingStrategy {
 
     private final PricingStrategy base;

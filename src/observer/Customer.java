@@ -1,5 +1,7 @@
 package observer;
 
+import observer.interfaces.Observer;
+
 public class Customer implements Observer {
     public static String name;
     public Customer(String name) { Customer.name = name; }

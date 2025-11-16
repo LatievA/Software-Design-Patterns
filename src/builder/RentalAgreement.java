@@ -1,8 +1,7 @@
 package builder;
 
 import strategy.PricingContext;
-import vehicle.Vehicle;
-import strategy.PricingStrategy;
+import strategy.interfaces.PricingStrategy;
 
 public class RentalAgreement {
     private final String customerName;

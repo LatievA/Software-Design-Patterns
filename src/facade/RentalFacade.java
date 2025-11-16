@@ -1,8 +1,8 @@
 package facade;
 
 import factory.*;
+import observer.interfaces.Observer;
 import vehicle.*;
-import vehicle.fuel.*;
 import builder.*;
 import strategy.*;
 import decorator.*;
