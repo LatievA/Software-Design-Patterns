@@ -13,4 +13,19 @@ public class Bike extends Vehicle {
     public String getDescription() {
         return "Bike running on " + (fuelType != null ? fuelType.getFuelType() : "unknown fuel");
     }
+
+    @Override
+    public boolean hasGPS() {
+        return false;
+    }
+
+    @Override
+    public boolean hasInsurance() {
+        return false;
+    }
+
+    @Override
+    public boolean hasChildSeat() {
+        return false;
+    }
 }

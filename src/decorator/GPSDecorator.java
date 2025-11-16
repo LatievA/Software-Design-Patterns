@@ -9,4 +9,21 @@ public class GPSDecorator extends VehicleDecorator {
     public String getDescription() {
         return decoratedVehicle.getDescription() + " + GPS";
     }
+
+    @Override
+    public boolean hasGPS() {
+        return true;
+    }
+
+    @Override
+    public boolean hasInsurance() {
+        return false;
+    }
+
+    @Override
+    public boolean hasChildSeat() {
+        return false;
+    }
+
+
 }
