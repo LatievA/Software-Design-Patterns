@@ -26,4 +26,19 @@ public class Truck extends Vehicle {
         String base = "Truck running on " + (fuelType != null ? fuelType.getFuelType() : "unknown fuel");
         return capacityKg > 0 ? base + " (capacity " + capacityKg + "kg)" : base;
     }
+
+    @Override
+    public boolean hasGPS() {
+        return false;
+    }
+
+    @Override
+    public boolean hasInsurance() {
+        return false;
+    }
+
+    @Override
+    public boolean hasChildSeat() {
+        return false;
+    }
 }

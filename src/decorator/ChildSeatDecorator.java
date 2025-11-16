@@ -12,4 +12,19 @@ public class ChildSeatDecorator extends VehicleDecorator {
     public String getDescription() {
         return decoratedVehicle.getDescription() + " + Child Seat";
     }
+
+    @Override
+    public boolean hasGPS() {
+        return false;
+    }
+
+    @Override
+    public boolean hasInsurance() {
+        return false;
+    }
+
+    @Override
+    public boolean hasChildSeat() {
+        return true;
+    }
 }

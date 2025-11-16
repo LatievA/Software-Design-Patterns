@@ -9,4 +9,21 @@ public class InsuranceDecorator extends VehicleDecorator {
     public String getDescription() {
         return decoratedVehicle.getDescription() + " + Insurance";
     }
+
+    @Override
+    public boolean hasGPS() {
+        return false;
+    }
+
+    @Override
+    public boolean hasInsurance() {
+        return true;
+    }
+
+    @Override
+    public boolean hasChildSeat() {
+        return false;
+    }
+
+
 }
