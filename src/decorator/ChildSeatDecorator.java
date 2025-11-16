@@ -12,6 +12,4 @@ public class ChildSeatDecorator extends VehicleDecorator {
     public String getDescription() {
         return decoratedVehicle.getDescription() + " + Child Seat";
     }
-
-
 }

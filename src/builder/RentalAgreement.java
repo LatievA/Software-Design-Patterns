@@ -16,7 +16,7 @@ public class RentalAgreement {
         this.pricingStrategy = strategy;
     }
 
-    public double calculatePrice() {
+    public float calculatePrice() {
         return pricingStrategy.calculatePrice(duration);
     }
 
